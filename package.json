@@ -1,0 +1,11 @@
+{
+  "name" : "EasyTap",
+  "version" : "0.1.0",
+  "description" : "Application for easily creating QR codes to automatically check into beers using Untappd",
+  "author" : "Chris Shoff",
+  "dependencies" : {
+  	"coffee-script" : ">= 1.3.1",
+    "express" : ">= 2.5.9",
+    "restler" : ">= 2.0.0"
+  }
+}
