@@ -1,10 +1,13 @@
 rest = require('restler')
 
-untappd_api = {
-	api_key : "c008aa60dba7fdfe30448007c90b40fe",
+class Untappd
+	api_key : "c008aa60dba7fdfe30448007c90b40fe"
+	end_point : "http://api.untappd.com/v3/"
+	api_search : "beer_search"
 
-	generate_checkin_url : (id, callback) ->
-		callback "/beer/#{id}"
-}
+	find_matching_beers : (name, callback) ->
+		url = "#{@end_point}#{@api_search}?key=#{@api_key}&q=#{name}".replace " ", "%20"
+		rest.get(url).on "complete", (data) ->
+			callback data.results
 
-module.exports.generate_checkin_url = untappd_api.generate_checkin_url
+module.exports = new Untappd

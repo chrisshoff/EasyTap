@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	each beer in beers
+		li 
+			a(href='/choose/#{beer.beer_id}')
+				#{beer.beer_name}
