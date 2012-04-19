@@ -1,7 +1,8 @@
 rest = require('restler')
+config = require('./config')
 
 class Untappd
-	api_key : "c008aa60dba7fdfe30448007c90b40fe"
+	api_key : config.untappd.api_key
 	end_point : "http://api.untappd.com/v3/"
 	api_search : "beer_search"
 	api_fetch : "beer_info"
