@@ -3,6 +3,12 @@ extends layout
 block content
 	form(id="easytap_form", name="easytap_form", action="/search", method="POST")
 		p
+			ul
+			each item in existing_beers
+				li
+					a(href='/choose/#{item._id}')
+						#{item.beer.name}
+		p
 			Enter beer name:
 			input(type="text", name="beer_name", id="beer_name")
 			input(type="submit", name="submit", id="submit", value="Submit")

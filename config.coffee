@@ -1,3 +1,7 @@
-config = untappd : api_key : "untappd_api_key_here"
+config = untappd : { 
+	api_key : "API-KEY-HERE",
+	username : "USERNAME-HERE",
+	password : "PASSWORD-HERE"
+}
 
 module.exports = config
